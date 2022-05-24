@@ -1,0 +1,13 @@
+
+<section class="componant section is-medium h-5"   >
+    <div *ngIf="isvalid"  >
+        Home
+      </div>
+      <ul class="item list-group" >
+          <li class="liitem list-group-item" *ngFor="let c of peopleByCountry" > <span > {{c.country}}</span>
+            <ul > 
+              <li *ngFor="let p of c.people" >{{p.name}}</li>
+            </ul>
+          </li>
+      </ul>
+  </section>
