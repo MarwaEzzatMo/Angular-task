@@ -8,6 +8,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FooterComponent } from './footer/footer.component';
 import { AsideComponent } from './aside/aside.component';
 import { HomeComponent } from './home/home.component';
+import { ToDoListComponent } from './to-do-list/to-do-list.component';
 
 
 
@@ -19,6 +20,7 @@ import { HomeComponent } from './home/home.component';
     FooterComponent,
     AsideComponent,
     HomeComponent,
+    ToDoListComponent,
   ],
   imports: [
     BrowserModule,

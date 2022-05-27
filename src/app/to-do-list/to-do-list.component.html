@@ -1,0 +1,55 @@
+<div class=" cont overflow-x-auto">
+  <div class="mb-3">
+  <span class="form-label ">ADD TODO</span>
+  <input
+    type="text"
+    placeholder="Type here to add a new todo"
+    class="form-control"
+    #todo
+  />
+  
+</div>
+
+<div class="mb-3">
+  <span class="form-label ">FILTER TODOS</span>
+  <input
+    type="text"
+    placeholder="Type here to Filter the todo"
+    class="form-control"
+    #todoFilter
+  />
+  <div class="mb-3">
+  <button class=" my btn btn-primary" value="Add" (click)="add(todo)">Add</button>
+  <button
+    class="my btn btn-success"
+    value="Filter"
+    (click)="searchTodos(todoFilter.value)"
+  >
+    Filter
+  </button>
+  </div>
+</div>
+
+  <table class="table table-striped ">
+    <thead>
+      <tr>
+        <th>NAME</th>
+        <th>ACTION</th>
+      </tr >
+    </thead>
+    <tbody>
+      <tr *ngFor="let todo of filteredTodos" class="w-4">
+        <td>{{ todo.name }}</td>
+        <td>
+          <button
+            class="btn btn-warning"
+            value="Delete"
+            (click)="delete(todo.id)"
+          >
+            Complete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

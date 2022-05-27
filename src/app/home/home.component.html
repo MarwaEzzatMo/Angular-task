@@ -1,4 +1,4 @@
-
+<!-- 
 <section class="componant section is-medium h-5"   >
     <div *ngIf="isvalid"  >
         Home
@@ -10,4 +10,19 @@
             </ul>
           </li>
       </ul>
-  </section>
+  </section> -->
+
+
+  <section class="componant section is-medium h-5"   >
+    <div  class="text-center list-group-item-action list-group-item-secondary" *ngFor="let country of peopleByCountry" [ngSwitch]="country.country">
+        <span *ngSwitchCase="'US'" class="text-danger">{{country.country}}</span>
+        <span *ngSwitchCase="'UK'" class="text-success">{{country.country}}</span>
+        <span *ngSwitchDefault  class="text-info"> {{country.country}}</span>
+        <ul>
+    <li  class="list-group-item list-group-item-action" *ngFor="let people of country.people">
+        {{people.name}}
+    </li>
+    </ul>
+    </div>
+
+</section>
