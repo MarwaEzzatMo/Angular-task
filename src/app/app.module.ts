@@ -9,6 +9,12 @@ import { FooterComponent } from './footer/footer.component';
 import { AsideComponent } from './aside/aside.component';
 import { HomeComponent } from './home/home.component';
 import { ToDoListComponent } from './to-do-list/to-do-list.component';
+import { ProductListComponent } from './product/product-list/product-list.component';
+import { ProductCardComponent } from './product/product-card/product-card.component';
+import { ProductDetailsComponent } from './product/product-details/product-details.component';
+import { StringSlicePipe } from './string-slice.pipe';
+import { FavouriteProductComponent } from './product/favourite-product/favourite-product.component';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 
 
@@ -21,6 +27,12 @@ import { ToDoListComponent } from './to-do-list/to-do-list.component';
     AsideComponent,
     HomeComponent,
     ToDoListComponent,
+    ProductListComponent,
+    ProductCardComponent,
+    ProductDetailsComponent,
+    StringSlicePipe,
+    FavouriteProductComponent,
+    ErrorPageComponent
   ],
   imports: [
     BrowserModule,

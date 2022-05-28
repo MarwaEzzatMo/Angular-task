@@ -33,12 +33,14 @@
   <table class="table table-striped ">
     <thead>
       <tr>
+        <th>ID</th>
         <th>NAME</th>
         <th>ACTION</th>
       </tr >
     </thead>
     <tbody>
       <tr *ngFor="let todo of filteredTodos" class="w-4">
+        <th>{{ todo.id }}</th>
         <td>{{ todo.name }}</td>
         <td>
           <button
@@ -46,7 +48,7 @@
             value="Delete"
             (click)="delete(todo.id)"
           >
-            Complete
+            DELETE
           </button>
         </td>
       </tr>

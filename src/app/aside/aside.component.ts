@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { IProduct } from '../product/iprod';
+import { CartService } from '../product/cart-service/cart.service';
+
 
 @Component({
   selector: 'app-aside',
@@ -7,9 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AsideComponent implements OnInit {
 
-  constructor() { }
+ cartItems?: IProduct[];
+  cartCounts?: number[];
+
+  constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
+    this.cartItems = this.cartService.getItems().items;
+    this.cartCounts = this.cartService.getItems().counts;
   }
 
+  deleteFromCart(product: IProduct) {
+    this.cartService.removeFromCart(product);
+    window.alert('Your product has been removed from the cart!');
+  }
+
+
 }
+
