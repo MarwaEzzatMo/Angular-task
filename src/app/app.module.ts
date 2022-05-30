@@ -15,6 +15,12 @@ import { ProductDetailsComponent } from './product/product-details/product-detai
 import { StringSlicePipe } from './string-slice.pipe';
 import { FavouriteProductComponent } from './product/favourite-product/favourite-product.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
+import { AddProductComponent } from './product/add-product/add-product.component';
+import { AllPhotosComponent } from './all-photos/all-photos.component';
 
 
 
@@ -32,11 +38,18 @@ import { ErrorPageComponent } from './error-page/error-page.component';
     ProductDetailsComponent,
     StringSlicePipe,
     FavouriteProductComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    LoginComponent,
+    UserDetailsComponent,
+    AddProductComponent,
+    AllPhotosComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

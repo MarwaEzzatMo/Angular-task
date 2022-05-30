@@ -6,7 +6,10 @@ import { ProductListComponent } from './product/product-list/product-list.compon
 import { ProductDetailsComponent } from './product/product-details/product-details.component';
 import { FavouriteProductComponent } from './product/favourite-product/favourite-product.component';
 import { ErrorPageComponent  } from './error-page/error-page.component';
-
+import { LoginComponent } from './login/login.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
+import { AddProductComponent } from './product/add-product/add-product.component';
+import { AllPhotosComponent } from './all-photos/all-photos.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -15,6 +18,10 @@ const routes: Routes = [
   { path: 'product-details', component:ProductListComponent  },
   { path: 'prod-details/:id', component: ProductDetailsComponent },
   { path: 'fav-prod' , component: FavouriteProductComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'add-product', component: AddProductComponent },
+  { path: 'user-details/:id', component: UserDetailsComponent },
+  { path: 'all-photos', component: AllPhotosComponent },
   { path: 'error-page', component: ErrorPageComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', redirectTo: 'error-page', pathMatch: 'full' },

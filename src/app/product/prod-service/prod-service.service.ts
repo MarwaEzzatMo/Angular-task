@@ -259,4 +259,9 @@ export class ProdServiceService {
     return this.prods.find(prod => prod.id == id);
   }
 
+
+  post(prod: IProduct) {
+    this.prods.push(prod);
+  }
+  
 }
